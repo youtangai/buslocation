@@ -29,8 +29,8 @@ type Info struct {
 }
 
 var (
-	start = flag.String("s", "sisho", "乗車場所 school or sisho or weather or fun or airport")
-	end   = flag.String("e", "fun", "降車場所 school or sisho or weather or fun or airport")
+	start = flag.String("s", "sisho", "乗車場所 school or sisho or weather or fun or airport or nishibori or hakodatestation")
+	end   = flag.String("e", "fun", "降車場所 school or sisho or weather or fun or airport or nishibori or hakodatestation")
 	m     = make(map[int]Info)
 	info  = Info{}
 )
