@@ -15,8 +15,8 @@ import (
 )
 
 const (
-	originHost = "***"
-	originPath = "***"
+	originHost = "http://www.hakobus.jp"
+	originPath = "/result.php"
 )
 
 //Info is hogehoge
@@ -29,8 +29,8 @@ type Info struct {
 }
 
 var (
-	start = flag.String("s", "sisho", "乗車場所 school or sisho or weather or fun")
-	end   = flag.String("e", "fun", "降車場所 school or sisho or weather or fun")
+	start = flag.String("s", "sisho", "乗車場所 school or sisho or weather or fun or airport or nishibori or hakodatestation")
+	end   = flag.String("e", "fun", "降車場所 school or sisho or weather or fun or airport or nishibori or hakodatestation")
 	m     = make(map[int]Info)
 	info  = Info{}
 )
@@ -110,10 +110,13 @@ func PrintMap() {
 func main() {
 	flag.Parse()
 	dic := map[string]string{
-		"school":  "453",
-		"sisho":   "155",
-		"fun":     "165",
-		"weather": "156",
+		"school":          "453",
+		"sisho":           "155",
+		"fun":             "165",
+		"weather":         "156",
+		"airport":         "506",
+		"nishibori":       "227",
+		"hakodatestation": "3",
 	}
 	s := dic[*start]
 	e := dic[*end]
