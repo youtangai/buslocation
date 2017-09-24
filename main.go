@@ -110,11 +110,13 @@ func PrintMap() {
 func main() {
 	flag.Parse()
 	dic := map[string]string{
-		"school":  "453",
-		"sisho":   "155",
-		"fun":     "165",
-		"weather": "156",
-		"airport": "506",
+		"school":          "453",
+		"sisho":           "155",
+		"fun":             "165",
+		"weather":         "156",
+		"airport":         "506",
+		"nishibori":       "227",
+		"hakodatestation": "3",
 	}
 	s := dic[*start]
 	e := dic[*end]
